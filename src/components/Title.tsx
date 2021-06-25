@@ -1,9 +1,7 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 import { Colors } from 'SwensonheTask/assets/styles/Colors';
-import Elements from 'SwensonheTask/assets/styles/Elements';
 import { SCREEN_HEIGHT } from '../services/helper/Constant';
-import { useTranslation } from '../services/hooks';
 
 export default function Title({
   title,
@@ -24,11 +22,10 @@ export default function Title({
   medium?: boolean;
   large?: boolean;
 }) {
-  const t = useTranslation();
   return (
     <Text
       style={[
-        Elements.title,
+        styles.title,
         {
           color,
           fontFamily: fontFamily,
@@ -43,7 +40,14 @@ export default function Title({
         style,
       ]}
       numberOfLines={numberOfLines}>
-      {t(title)}
+      {title}
     </Text>
   );
 }
+const styles = StyleSheet.create({
+  title: {
+    fontSize: SCREEN_HEIGHT / 35,
+    textAlign: 'center'
+  },
+
+});

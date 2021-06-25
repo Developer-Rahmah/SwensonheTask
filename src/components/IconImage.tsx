@@ -2,7 +2,6 @@ import React from 'react';
 import { I18nManager } from 'react-native';
 import { Image, ImageSourcePropType } from 'react-native';
 import { Colors } from 'SwensonheTask/assets/styles/Colors';
-import Elements from 'SwensonheTask/assets/styles/Elements';
 import { SCREEN_WIDTH } from '../services/helper/Constant';
 
 export default function IconImage({
@@ -10,13 +9,11 @@ export default function IconImage({
   color,
   small,
   style,
-  transform = true
 }: {
   source: ImageSourcePropType;
   color?: Colors;
   small?: boolean;
   style?: {};
-  transform?: boolean
 }) {
   return (
     <Image
@@ -25,14 +22,17 @@ export default function IconImage({
       style={[
         small
           ? {
-            width: SCREEN_WIDTH / 17,
-            height: SCREEN_WIDTH / 17,
+            width: SCREEN_WIDTH / 13,
+            height: SCREEN_WIDTH / 13,
             resizeMode: 'contain'
           }
-          : Elements.icon,
+          :
+          {
+            width: SCREEN_WIDTH / 7,
+            height: SCREEN_WIDTH / 7,
+          },
         {
           tintColor: color,
-          transform: [{ rotateY: transform ? I18nManager.isRTL ? '180deg' : '0deg' : '0deg' }],
         },
         style,
       ]}

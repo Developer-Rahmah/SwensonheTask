@@ -5,20 +5,24 @@ import { useNavigation } from '@react-navigation/native';
 import { SCREEN_HEIGHT } from '../services/helper/Constant';
 import IconImage from 'SwensonheTask/src/components/IconImage';
 import Bluetooth from 'SwensonheTask/assets/icons/bluetooth.png'
-import Logo from 'SwensonheTask/assets/icons/logo.png'
 import Notification from 'SwensonheTask/assets/icons/notification.png'
+import Logo from 'SwensonheTask/assets/icons/logo.png'
+
 export const Header = ({
   titleColor,
   title = 'Items',
   showBack = false,
   showMenu = false,
   showBell = false,
+  showLogo=true,
 }: {
   titleColor?: Colors;
   title?: string;
   showBack?: boolean;
   showMenu?: boolean;
   showBell?: boolean;
+  showLogo?:boolean;
+    childere?:JSX.Element
 }) => {
   const navigation = useNavigation();
   return (
@@ -28,7 +32,12 @@ export const Header = ({
         <IconImage source={Bluetooth} small />
       </View>
       <View style={styles.iconContainer} >
-        <IconImage source={Logo} />
+
+    {showLogo?
+          <IconImage source={Logo} />
+          :
+          null
+    }
 
       </View>
       <View style={styles.iconContainer} >

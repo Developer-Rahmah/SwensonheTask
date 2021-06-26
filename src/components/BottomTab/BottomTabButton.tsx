@@ -30,7 +30,7 @@ const BottomTabButton = ({
           color={focused ? Colors.GREEN : label === '' ? Colors.WHITE : Colors.LIGHT_GRAY}
         />
       </View>
-      <Title title={label} />
+      <Title color={Colors.LIGHT_GRAY} title={label} />
     </TouchableOpacity>
   )
 }
@@ -46,6 +46,6 @@ const styles = StyleSheet.create({
 
   greenCircle: {
     backgroundColor: Colors.GREEN,
-    padding: 20, borderRadius: 50,
+    padding: 20, borderRadius: 50,marginLeft:20
   }
 });

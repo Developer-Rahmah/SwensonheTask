@@ -1,6 +1,6 @@
-import React from 'react';
-import { Colors } from 'SwensonheTask/assets/styles/Colors';
-import styled from 'styled-components/native';
+import React from "react";
+import styled from "styled-components/native";
+import { Colors } from "SwensonheTask/assets/styles/Colors";
 
 export const MainContainer = styled.ScrollView`
   flex: 1;

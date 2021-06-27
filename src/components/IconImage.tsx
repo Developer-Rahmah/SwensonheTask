@@ -1,19 +1,17 @@
-import React from 'react';
-import { I18nManager } from 'react-native';
-import { Image, ImageSourcePropType } from 'react-native';
-import { Colors } from 'SwensonheTask/assets/styles/Colors';
-import { SCREEN_WIDTH } from '../services/helper/Constant';
+import React from "react";
+import { Image, ImageSourcePropType } from "react-native";
+import { Colors } from "SwensonheTask/assets/styles/Colors";
+
+import { SCREEN_WIDTH } from "../services/helper/Constant";
 
 export default function IconImage({
   source,
   color,
-  small,
-  style,
+  small
 }: {
   source: ImageSourcePropType;
   color?: Colors;
   small?: boolean;
-  style?: {};
 }) {
   return (
     <Image
@@ -22,19 +20,17 @@ export default function IconImage({
       style={[
         small
           ? {
-            width: SCREEN_WIDTH / 13,
-            height: SCREEN_WIDTH / 13,
-            resizeMode: 'contain'
-          }
-          :
-          {
-            width: SCREEN_WIDTH / 7,
-            height: SCREEN_WIDTH / 7,
-          },
+              width: SCREEN_WIDTH / 13,
+              height: SCREEN_WIDTH / 13,
+              resizeMode: "contain"
+            }
+          : {
+              width: SCREEN_WIDTH / 7,
+              height: SCREEN_WIDTH / 7
+            },
         {
-          tintColor: color,
-        },
-        style,
+          tintColor: color
+        }
       ]}
     />
   );

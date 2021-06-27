@@ -1,17 +1,13 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import AppNavigator from 'SwensonheTask/src/navigations/AppNavigator';
-import { Provider } from 'react-redux';
-import store from './src/services/redux/store';
+import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
+import AppNavigator from "SwensonheTask/src/navigations/AppNavigator";
+
 export default function App() {
   console.disableYellowBox = true;
 
   return (
-    <Provider store={store}>
-      <NavigationContainer>
-        <AppNavigator />
-      </NavigationContainer>
-    </Provider>
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
   );
-};
-
+}

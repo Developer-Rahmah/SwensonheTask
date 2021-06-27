@@ -1,7 +1,10 @@
 
+  interface IData {
+  x: number;
+  y: number;
+}
 
-
-export  const  Data=
+export  const  data:IData[]=
  [
   { x: 1451865600, y: 1.95 },
   { x: 1451952000, y: 1.95 },
